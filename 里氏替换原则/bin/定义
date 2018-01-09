@@ -1,0 +1,17 @@
+26.2 里氏替换原则【Liskov Substitution Principle】
+里氏替换法则是非常简单的，而且你在系统设计的时候肯定已经用到了，而且现在已经延伸到了Web
+Service 的开发领域。里氏替换法则有两种定义：
+第一个定义，最正宗的定义：If for each object o1 of type S there is an object o2 of type T
+such that for all programs P defined in terms of T, the behavior of P is unchanged when o1 is
+substituted for o2 then S is a subtype of T.
+如果对每一个类型为T1 的对象o1，都有类型为T2 的对象o2，使得以T1 定义的所有程序P 在所有的
+对象o1 都代换成o2 时，程序P 的行为没有发生变化，那么类型T2 是类型T1 的子类型。
+第二个定义，functions that use pointers or references to base classes must be able to use
+objects of derived classes without knowing it.
+所有引用基类的地方必须能透明地使用其子类的对象。
+
+
+
+里氏替换法则诞生的目的就是加强程序的健壮性，同时版本升级也可以做到非常好的兼容性，增加子
+类，原有的子类还可以继续运行。在我们项目实施中就是每个子类对应了不同的业务含义，使用父类作为
+参数，传递不同的子类完成不同的业务逻辑，非常完美！

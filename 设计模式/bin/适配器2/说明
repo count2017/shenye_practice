@@ -1,0 +1,3 @@
+适配器模式在java中的经典应用：
+-java.io.InputStreamReader(InputStream)
+-java.io.OutputStreamWriter(OutputStream)
